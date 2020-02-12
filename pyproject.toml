@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "uyghur"
+version = "0.0.1"
+description = "All things you need for Uyghur Language."
+authors = [
+    "Tang Ziya <tcztzy@gmail.com>"
+]
+license = "AGPLv3+"
+readme = "README.md"
+keywords = ["Uyghur", "NPL"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Natural Language :: Uyghur",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.1"
+pytest-cov = "^2.5"
+black = { version = "^19.10b0", python = "^3.6" }
