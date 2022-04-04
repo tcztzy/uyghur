@@ -148,5 +148,8 @@ class UEY2ULYTestCase(unittest.TestCase):
         self.assertConvertTo('\u0626\u0640\u0627', "A")
         self.assertConvertTo('\u0640', "\u0640")
 
+    def test_sentance(self):
+        self.assertConvertTo("100.ئارال ئەتىگەندە بەك سوغۇق.", "100.aral etigende bek soghuq.")
+
 if __name__ == "__main__":
     unittest.main()

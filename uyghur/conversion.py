@@ -183,7 +183,7 @@ def uey2uly(uey):  # type: (str) -> str
 
     regexp = "|".join(f"(?P<{grp}>{exp})" for grp, exp in expressions)
     result = "".join(_uey2uly_conversion(mo) for mo in re.finditer(regexp, basic))
-    result = re.sub("(?<=\s)'(?=[aeiouëöü])", "", result)
+    result = re.sub("(?<=\s|\W)'(?=[aeiouëöü])", "", result)
     result = re.sub("^'(?=[aeiouëöü])", "", result)
     words = []
     abbr = False
