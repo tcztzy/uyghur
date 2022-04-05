@@ -1,5 +1,4 @@
 # coding:utf-8
-import collections
 import re
 from functools import lru_cache
 from unicodedata import lookup, name
@@ -181,10 +180,10 @@ def uey2uly(uey):  # type: (str) -> str
         ("OTHERS", r"[\s\S]"),
     )
 
-    regexp = "|".join(f"(?P<{grp}>{exp})" for grp, exp in expressions)
+    regexp = "|".join(rf"(?P<{grp}>{exp})" for grp, exp in expressions)
     result = "".join(_uey2uly_conversion(mo) for mo in re.finditer(regexp, basic))
-    result = re.sub("(?<=\s|\W)'(?=[aeiouëöü])", "", result)
-    result = re.sub("^'(?=[aeiouëöü])", "", result)
+    result = re.sub(r"(?<=\W)'(?=[aeiouëöü])", "", result)
+    result = re.sub(r"^'(?=[aeiouëöü])", "", result)
     words = []
     abbr = False
     for word in result.split(" "):

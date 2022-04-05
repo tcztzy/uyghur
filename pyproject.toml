@@ -1,13 +1,12 @@
-[tool.poetry]
+[project]
 name = "uyghur"
 version = "0.0.1"
 description = "All things you need for Uyghur Language."
-authors = [
-    "Tang Ziya <tcztzy@gmail.com>"
-]
-license = "AGPLv3+"
 readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
 keywords = ["Uyghur", "NPL"]
+authors = [{ name = "Tang Ziya", email = "<tcztzy@gmail.com>" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -15,11 +14,5 @@ classifiers = [
     "Natural Language :: Uyghur",
     "Topic :: Text Processing :: Linguistic",
 ]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-
-[tool.poetry.dev-dependencies]
-pytest = "^4.1"
-pytest-cov = "^2.5"
-black = { version = "^19.10b0", python = "^3.6" }
+[project.optional-dependencies]
+test = ["pytest >= 4.1", "pytest-cov >= 2.5"]
