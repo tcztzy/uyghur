@@ -1,6 +1,6 @@
 [project]
 name = "uyghur"
-version = "0.1.0"
+version = "0.1.1"
 description = "All things you need for Uyghur Language."
 readme = "README_zh.md"
 requires-python = ">=3.8"
@@ -19,3 +19,6 @@ test = ["pytest >= 4.1", "pytest-cov >= 2.5"]
 
 [project.urls]
 repository = "https://github.com/tcztzy/uyghur"
+
+[tool.setuptools]
+include-package-data = true
