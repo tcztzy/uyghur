@@ -16,3 +16,6 @@ classifiers = [
 ]
 [project.optional-dependencies]
 test = ["pytest >= 4.1", "pytest-cov >= 2.5"]
+
+[project.urls]
+repository = "https://github.com/tcztzy/uyghur"
