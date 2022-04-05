@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 keywords = ["Uyghur", "NPL"]
-authors = [{ name = "Tang Ziya", email = "<tcztzy@gmail.com>" }]
+authors = [{ name = "Tang Ziya", email = "tcztzy@gmail.com" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
