@@ -134,7 +134,7 @@ for l in "DAL|REH|ZAIN|JEH|VE".split("|"):
         PRESENTATION2BASIC[_(f"ARABIC LETTER {l} {f} FORM")] = _(f"ARABIC LETTER {l}")
 
 
-def get_name(char):
+def get_name(char: str) -> str:
     if len(char) == 1:
         return name(char).replace(" ", "_")
     else:
@@ -147,11 +147,11 @@ def get_name(char):
             return " PLUS ".join(map(name, char)).replace(" ", "_")
 
 
-def presentation2basic(presentation):  # type: (str) -> str
+def presentation2basic(presentation: str) -> str:
     return "".join((PRESENTATION2BASIC.get(c, c) for c in presentation))
 
 
-def _uey2uly_conversion(match_object: re.Match):
+def _uey2uly_conversion(match_object: re.Match) -> str:
     kind = match_object.lastgroup
     value = match_object.group()
 
@@ -167,7 +167,7 @@ def _uey2uly_conversion(match_object: re.Match):
         return UEY2ULY.get(value, value)
 
 
-def uey2uly(uey):  # type: (str) -> str
+def uey2uly(uey: str) -> str:
     basic = presentation2basic(uey)
     expressions = (
         ("IGNORE", r"\u200B[^\uFEFF]+\uFEFF"),
