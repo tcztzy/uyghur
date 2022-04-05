@@ -1,5 +1,6 @@
 /.vscode/
 /uyghur.egg-info/
 /.python-version
+/dist/
 
 __pycache__/
