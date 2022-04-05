@@ -1,8 +1,8 @@
 [project]
 name = "uyghur"
-version = "0.0.1"
+version = "0.1.0"
 description = "All things you need for Uyghur Language."
-readme = "README.md"
+readme = "README_zh.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 keywords = ["Uyghur", "NPL"]
